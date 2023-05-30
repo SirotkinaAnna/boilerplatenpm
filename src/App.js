@@ -45,8 +45,9 @@ function App() {
     })
     console.log("res", res)
     if (res.length > 0) {
-      const audio = new Audio(res[0].src)
-      audio.play();
+
+      const myAudio = document.querySelector("audio#" + event.key.toUpperCase());
+      myAudio.play();
     }
   }
   useEffect(() => {
